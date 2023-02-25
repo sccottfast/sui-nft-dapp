@@ -1,0 +1,95 @@
+// $emblabutton: #56acff;
+.embla {
+  position: relative;
+  padding: 15px;
+  // max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  // background-color: #56ac34;
+  width: 100%;
+  display:flex;
+  left:0;
+  right:0;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+  left:0;
+  right:0;
+
+}
+
+.embla__viewport.is-dragging {
+  cursor: alias;
+  left:0;
+  right:0;
+}
+
+.embla__container {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.embla__slide {
+  
+
+  display: flex;
+  position: relative;
+  flex: 0  0 40%;
+  max-width: 30%;
+  margin-right: 10px;
+  height: 30px;
+  
+}
+
+
+
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  
+  transform: translateY(-50%);
+  border: 10px;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: flex-start;
+  // fill: $emblabutton;
+  padding: 0;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.embla__button--prev {
+  left: 2px;
+  
+}
+
+.embla__button--next {
+  right: 2px;
+}
